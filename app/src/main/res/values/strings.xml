@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">PETS App</string>
+
+    <string name="species_default">Enter Species</string>
+    <string name="species_dog">dog</string>
+    <string name="species_cat">cat</string>
+    <string name="species_fish">fish</string>
+    <string name="species_bird">bird</string>
+    <string name="species_reptile">reptile</string>
+    <string name="species_rodent">rodent</string>
+    <string name="species_arachnid">arachnid</string>
+
+    <string name="sex_default">Select Sex</string>
+    <string name="sex_female">female</string>
+    <string name="sex_male">male</string>
+
+    <string name="wt_kg">kg</string>
+    <string name="wt_pounds">lbs</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="species_entries">
+        <item>@string/species_default</item>
+        <item>@string/species_arachnid</item>
+        <item>@string/species_bird </item>
+        <item>@string/species_cat</item>
+        <item>@string/species_dog </item>
+        <item>@string/species_fish </item>
+        <item>@string/species_reptile</item>
+        <item>@string/species_rodent </item>
+    </string-array>
+    <string-array name="sex_entries">
+        <item>@string/sex_default</item>
+        <item>@string/sex_male</item>
+        <item>@string/sex_female</item>
+    </string-array>
+
+    <string-array name="weight_entries">
+        <item>@string/wt_pounds</item>
+        <item>@string/wt_kg</item>
+    </string-array>
+
+</resources>
