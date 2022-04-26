@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_calendar.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_chat_window.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_chatwindow.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_homepage.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_login.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_pet_profile.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_pet_profile.xml" value="0.33" />
       </map>
     </option>
   </component>

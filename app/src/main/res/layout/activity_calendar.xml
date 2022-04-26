@@ -8,10 +8,10 @@
 
 
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Chat Placeholder: Socilization"
-    android:textSize="50sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendar View"
+        android:textSize="50sp"/>
 
 </LinearLayout>
