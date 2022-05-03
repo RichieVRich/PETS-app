@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.petsapp.R
 
-class PetprofileAdapater : RecyclerView.Adapter<PetprofileAdapater.ViewHolder>(){
+class PetprofileAdapater (): RecyclerView.Adapter<PetprofileAdapater.ViewHolder>(){
     val petProfiles: MutableList<PetProfile> = mutableListOf()
 
     override fun getItemCount() = petProfiles.size

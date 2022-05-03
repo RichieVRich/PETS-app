@@ -9,44 +9,43 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Pet"
-        android:textSize="22sp"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="setting"
         />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-         <TextView
-             android:id="@+id/tv_petprofile"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Display area of pets"
-             android:textSize="22sp"
-        />
-    </ScrollView>
-
 
     <Button
+        android:id="@+id/btn_add_pet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Pet"
+        android:textSize="22sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pet_profiles"
+        android:layout_width="384dp"
+        android:layout_height="463dp" />
+
+<TableRow
+    android:id="@+id/table_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_margin="15dp">
+    <Button
+        android:id="@+id/btn_calendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calendar"
         android:textSize="22sp"
         />
     <Button
+        android:id="@+id/button_chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Chat"
         android:textSize="22sp"
         />
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rv_pet_profiles"
-        />
+</TableRow>
+
 
 
 </LinearLayout>

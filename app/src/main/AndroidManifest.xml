@@ -13,10 +13,12 @@
         android:theme="@style/Theme.PETSApp" >
         <activity
             android:name=".ui.chatwindow"
+            android:parentActivityName=".ui.MainActivity"
             android:exported="false" />
 
         <activity
             android:name=".ui.Calendar"
+            android:parentActivityName=".ui.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.Homepage"
@@ -27,6 +29,7 @@
 
         <activity
             android:name=".ui.PetProfile"
+            android:parentActivityName=".ui.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
