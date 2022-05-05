@@ -10,11 +10,10 @@ const val DATABASE_NAME = "pets-db"
 
 @Database(entities = [Vertebrate::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun getvertebratedao() : vertebrate_dao
+    abstract fun vertebrateDao() : VertebrateDao
 
     companion object {
-        @Volatile
-        private var instance: AppDatabase? = null
+        @Volatile private var instance: AppDatabase? = null
 
         fun getInstance(context: Context): AppDatabase {
             return instance ?: synchronized(this) {
@@ -27,8 +26,6 @@ abstract class AppDatabase : RoomDatabase() {
 
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(context, AppDatabase::class.java, DATABASE_NAME)
-                .createFromAsset("test.sql")
                 .build()
-
     }
 }

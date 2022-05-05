@@ -1,70 +1,43 @@
 package com.example.petsapp.ui
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Button
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.petsapp.R
-import com.example.petsapp.domain.PetProfile
-import com.example.petsapp.domain.PetprofileAdapater
-import com.example.petsapp.ui.chatwindow as chatwindow1
-import com.example.petsapp.ui.PetProfile as PetProfile1
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
+    private val TAG = "MainActivity"
+    private lateinit var appBarConfiguration: AppBarConfiguration
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val chatButton : Button = findViewById(R.id.button_chat)
-        val calendarBtn: Button = findViewById(R.id.btn_calendar)
-        val petBtn: Button = findViewById(R.id.btn_add_pet)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-        val petProfileRV =
-        findViewById<RecyclerView>(R.id.rv_pet_profiles)
-        petProfileRV.layoutManager =LinearLayoutManager(this)
-        petProfileRV.setHasFixedSize(true)
 
-        val adapter = PetprofileAdapater()
-        petProfileRV.adapter = adapter
+        val navHostFragment: NavHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        val drawLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        appBarConfiguration = AppBarConfiguration(navController.graph, drawLayout)
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
-        chatButton.setOnClickListener{
-            onChatClick()
-        }
-        calendarBtn.setOnClickListener{
-            onCalendarClick()
-        }
-        petBtn.setOnClickListener {
-            onAddClick()
-        }
-
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
-        adapter.addPetProfile(PetProfile("Sally",11))
+        findViewById<NavigationView>(R.id.nav_view).setupWithNavController(navController)
 
     }
 
-    private fun onChatClick(){
-        val intent = Intent(this, chatwindow1::class.java)
-        startActivity(intent)
-    }
-    private fun onCalendarClick(){
-        val intent = Intent(this, Calendar::class.java)
-        startActivity(intent)
-    }
-    private fun onAddClick(){
-        val intent = Intent(this, PetProfile1::class.java)
-        startActivity(intent)
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return  navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }

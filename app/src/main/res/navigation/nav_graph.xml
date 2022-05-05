@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homepage_fragment">
+
+
+        <fragment
+         android:id="@+id/homepage_fragment"
+         android:name="com.example.petsapp.ui.HomepageFragment"
+         android:label="@string/label_home"
+         tools:layout="@layout/homepage" >
+            <action
+                android:id="@+id/action_homepage_fragment_to_chatwindow_fragment"
+                app:destination="@id/chatwindow_fragment" />
+                <action
+                    android:id="@+id/action_homepage_fragment_to_calendar_fragment"
+                    app:destination="@id/calendar_fragment" />
+            <action
+                android:id="@+id/action_homepage_fragment_to_petprofile_fragment"
+                app:destination="@id/petprofile_fragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/chatwindow_fragment"
+            android:name="com.example.petsapp.ui.ChatWindowFragment"
+            android:label="@string/label_chat"
+            tools:layout="@layout/chatwindow"/>
+        <fragment
+            android:id="@+id/petprofile_fragment"
+            android:name="com.example.petsapp.ui.PetProfileFragment"
+            android:label="@string/label_petp"
+            tools:layout="@layout/activity_pet_profile"/>
+
+        <fragment
+            android:id="@+id/calendar_fragment"
+            android:name="com.example.petsapp.ui.CalendarFragment"
+            android:label="@string/label_calendar"
+            tools:layout="@layout/calendar" />
+
+        <fragment
+            android:id="@+id/settings"
+            android:name="com.example.petsapp.ui.SettingsFragment"
+            android:label="@string/label_settings"
+            />
+    <fragment
+        android:id="@+id/Login"
+        android:name="com.example.petsapp.ui.LoginFragment"
+        android:label="@string/label_person"
+        />
+
+</navigation>

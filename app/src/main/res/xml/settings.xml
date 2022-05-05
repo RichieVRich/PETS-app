@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory
+        android:key="notifications_category"
+        android:title="Notification">
+
+        <SwitchPreference
+          android:key="notifications"
+          android:title="Enable notifications"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="preferences_category"
+        android:title="Help">
+        <Preference
+            android:key="feedback"
+            android:title="Send feedback"
+            android:summary="Report technical issues or suggest new features"/>
+    </PreferenceCategory>
+</PreferenceScreen>

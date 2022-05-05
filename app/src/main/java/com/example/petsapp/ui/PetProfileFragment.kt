@@ -1,12 +1,24 @@
 package com.example.petsapp.ui
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.preference.PreferenceFragmentCompat
 import com.example.petsapp.R
 
 
-class PetProfile : AppCompatActivity() {
+class PetProfileFragment  : Fragment(R.layout.activity_pet_profile){
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
+}
+
+
+
+    /*: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pet_profile)
@@ -18,4 +30,4 @@ class PetProfile : AppCompatActivity() {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
     }
-}
+}*/

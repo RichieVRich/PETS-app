@@ -6,40 +6,43 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.petsapp.R
+import com.example.petsapp.data.Vertebrate
 
-class PetprofileAdapater (): RecyclerView.Adapter<PetprofileAdapater.ViewHolder>(){
-    val petProfiles: MutableList<PetProfile> = mutableListOf()
+class PetprofileAdapater (private val onPetProfileClick: (Vertebrate)-> Unit): RecyclerView.Adapter<PetprofileAdapater.PetProfileViewHolder>(){
 
-    override fun getItemCount() = petProfiles.size
+    var petProfilesList = listOf<Vertebrate>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
+    fun updatePetProfile(newPetProfile: List<Vertebrate>){
+        petProfilesList = newPetProfile ?: listOf()
+        notifyDataSetChanged()
+    }
+
+    override fun getItemCount() = petProfilesList.size
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetProfileViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.petprofile_box,parent,false)
-        return ViewHolder(view)
+        return PetProfileViewHolder(view, onPetProfileClick)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(petProfiles[position])
-    }
-    // Add Function
-    fun addPetProfile(petprofile: PetProfile){
-       petProfiles.add(0, petprofile)
-        notifyItemInserted(0)
-    }
-    // Delete Function
-    fun deletePetProfile(position: Int){
-        petProfiles.removeAt(position)
-        notifyItemRemoved(position)
+    override fun onBindViewHolder(holder: PetProfileViewHolder, position: Int) {
+        holder.bind(petProfilesList[position])
     }
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-        private val petProfileTV: TextView = view.findViewById(R.id.petprofile_text_tv)
-        private val petProfI2TV: TextView = view.findViewById(R.id.petprofile_for_int_text_tv)
+    class PetProfileViewHolder(itemView: View, val onClick: (Vertebrate) -> Unit): RecyclerView.ViewHolder(itemView){
+        private val petProfileTV: TextView = itemView.findViewById(R.id.petprofile_text_tv)
+        private val petProfI2TV: TextView = itemView.findViewById(R.id.petprofile_for_int_text_tv)
 
-        private var currentPetProfile: PetProfile? = null
+        private var currentPetProfile: Vertebrate? = null
 
+        init{
+            itemView.setOnClickListener{
+                currentPetProfile?.let(onClick)
+            }
+        }
 
-        fun bind( petprofile: PetProfile){
+        fun bind( petprofile: Vertebrate){
             currentPetProfile = petprofile
             petProfileTV.text = petprofile.text
             petProfI2TV.text =  petprofile.number.toString()
