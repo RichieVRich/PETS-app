@@ -38,4 +38,20 @@
     <string name="hint_password">Password</string>
     <string name="login_confirm">Login</string>
     <string name="login_unknown">Forgot Your Password</string>
+
+    <string name="calendar_year">Year</string>
+    <string name="calendar_month">Month</string>
+    <string name="calendar_day">Day</string>
+    <string name="calendar_hour">Hour</string>
+
+    <string name="calendar_mon">Mon</string>
+    <string name="calendar_tue">Tue</string>
+    <string name="calendar_wed">Wed</string>
+    <string name="calendar_rsa">Thur</string>
+    <string name="calendar_fri">Fri</string>
+    <string name="calendar_sat">Sat</string>
+    <string name="calendar_sun">Sun</string>
+
+
+
 </resources>
