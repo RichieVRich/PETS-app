@@ -14,7 +14,7 @@ import com.example.petsapp.domain.PetprofileAdapater
 
 
 class HomepageFragment : Fragment(R.layout.homepage) {
-    private val profileAdapter = PetprofileAdapater(::onChatClick)
+    //private val profileAdapter = PetprofileAdapater(::onChatClick)
     private lateinit var profilePet: RecyclerView
 
     private val  viewModel: VertebrateViewModel by viewModels()
@@ -25,15 +25,15 @@ class HomepageFragment : Fragment(R.layout.homepage) {
         profilePet = view.findViewById(R.id.rv_pet_profiles)
         profilePet.layoutManager = LinearLayoutManager(requireContext())
         profilePet.setHasFixedSize(true)
-        profilePet.adapter = this.profileAdapter
+    //    profilePet.adapter = this.profileAdapter
 
         val chatBtn: Button = view.findViewById(R.id.button_chat)
         val calendarBtn : Button = view.findViewById(R.id.btn_calendar)
         val petBtn : Button = view.findViewById(R.id.btn_add_pet)
-/*
+
         chatBtn.setOnClickListener{
             onChatClick()
-        }*/
+        }
         calendarBtn.setOnClickListener{
             onCalendarClick()
         }
@@ -41,17 +41,21 @@ class HomepageFragment : Fragment(R.layout.homepage) {
             onAddClick()
         }
         viewModel.getDatabase.observe(viewLifecycleOwner){ test ->
-            profileAdapter.updatePetProfile(test)
+        //    profileAdapter.updatePetProfile(test)
         }
         //adapter.addPetProfile(PetProfile("Sally",11))
     }
 
+    /*
     private fun onChatClick(profile: Vertebrate){
         val directions = HomepageFragmentDirections.actionHomepageFragmentToChatwindowFragment()
         findNavController().navigate(directions)
-
     }
-
+    */
+    private fun onChatClick(){
+        val directions = HomepageFragmentDirections.actionHomepageFragmentToChatwindowFragment()
+        findNavController().navigate(directions)
+    }
     private fun onCalendarClick(){
         val directions = HomepageFragmentDirections.actionHomepageFragmentToCalendarFragment()
         findNavController().navigate(directions)
