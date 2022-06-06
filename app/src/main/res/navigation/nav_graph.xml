@@ -21,6 +21,9 @@
             <action
                 android:id="@+id/action_homepage_fragment_to_petprofile_fragment"
                 app:destination="@id/petprofile_fragment" />
+            <action
+                android:id="@+id/action_homepage_fragment_to_Login"
+                app:destination="@id/Login" />
         </fragment>
 
         <fragment
@@ -49,6 +52,10 @@
         android:id="@+id/Login"
         android:name="com.example.petsapp.ui.LoginFragment"
         android:label="@string/label_person"
-        />
+        >
+        <action
+            android:id="@+id/action_Login_to_homepage_fragment"
+            app:destination="@id/homepage_fragment" />
+    </fragment>
 
 </navigation>
