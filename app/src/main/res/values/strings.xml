@@ -30,9 +30,9 @@
     <string name="label_settings">Settings</string>
     <string name="label_chat">Chat</string>
     <string name="label_calendar">Calendar</string>
-    <string name="label_home">Hello %1$s!</string>
+    <string name="label_home">Hello, </string>
     <string name="label_petp">Pet Profile</string>
-    <string name="label_person">Person</string>
+    <string name="label_person"></string>
 
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
@@ -45,6 +45,7 @@
     <string name="calendar_day">Day</string>
     <string name="calendar_hour">Hour</string>
 
+    <string name="default_month">Month Year</string>
     <string name="calendar_mon">Mon</string>
     <string name="calendar_tue">Tue</string>
     <string name="calendar_wed">Wed</string>

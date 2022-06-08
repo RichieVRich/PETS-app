@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/drawable/their_message_bubble.xml" value="0.196" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_calendar.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_chat_window.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_chatwindow.xml" value="0.18802083333333333" />
@@ -10,6 +11,18 @@
         <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_login.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_pet_profile.xml" value="0.33" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/activity_settings.xml" value="0.11730072463768115" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/calendar.xml" value="0.25" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/calendar_cell.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/cellPetProfile.xml" value="0.13779128672745694" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/chatwindow.xml" value="0.11730072463768115" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/homepage.xml" value="0.3138586956521739" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/my_message_layout.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/petprofile_box.xml" value="0.20606884057971014" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/petprofile_cell.xml" value="0.20425724637681159" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/petprofilecell.xml" value="0.20425724637681159" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/layout/their_message_layout.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Richard/AndroidStudioProjects/PETSApp/app/src/main/res/xml/settings.xml" value="0.11730072463768115" />
         <entry key="..\:/Users/silve/PETS-app/app/src/main/res/drawable/my_message_buuble.xml" value="0.124" />
         <entry key="..\:/Users/silve/PETS-app/app/src/main/res/drawable/their_message_bubble.xml" value="0.1" />
         <entry key="..\:/Users/silve/PETS-app/app/src/main/res/layout/activity_homepage.xml" value="0.1" />
@@ -23,8 +36,7 @@
         <entry key="..\:/Users/silve/PETS-app/app/src/main/res/layout/my_message_layout.xml" value="0.1" />
         <entry key="..\:/Users/silve/PETS-app/app/src/main/res/layout/petprofile_box.xml" value="0.1" />
         <entry key="..\:/Users/silve/PETS-app/app/src/main/res/layout/their_message_layout.xml" value="0.4" />
-        <entry key="..\:/Users/silve/PETS-app/app/src/main/res/menu/main_nav_drawer.xml" value="0.264" />
-        <entry key="..\:/Users/silve/PETS-app/app/src/main/res/xml/settings.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/silve/PETS-app/app/src/main/res/menu/main_nav_drawer.xml" value="0.11302083333333333" />
       </map>
     </option>
   </component>

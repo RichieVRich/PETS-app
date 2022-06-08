@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.petsapp.R
 import com.example.petsapp.data.Vertebrate
 
-class PetprofileAdapater (private val onPetProfileClick: (Vertebrate)-> Unit): RecyclerView.Adapter<PetprofileAdapater.PetProfileViewHolder>(){
+class PetprofileAdapater (private val onPetProfileClick: (Vertebrate)-> Unit):
+    RecyclerView.Adapter<PetprofileAdapater.PetProfileViewHolder>(){
 
     var petProfilesList = listOf<Vertebrate>()
 
@@ -22,7 +23,7 @@ class PetprofileAdapater (private val onPetProfileClick: (Vertebrate)-> Unit): R
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetProfileViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.petprofile_box,parent,false)
+            .inflate(R.layout.petprofilecell,parent,false)
         return PetProfileViewHolder(view, onPetProfileClick)
     }
 
@@ -30,9 +31,9 @@ class PetprofileAdapater (private val onPetProfileClick: (Vertebrate)-> Unit): R
         holder.bind(petProfilesList[position])
     }
 
-    class PetProfileViewHolder(itemView: View, val onClick: (Vertebrate) -> Unit): RecyclerView.ViewHolder(itemView){
-        private val petProfileTV: TextView = itemView.findViewById(R.id.petprofile_text_tv)
-        private val petProfI2TV: TextView = itemView.findViewById(R.id.petprofile_for_int_text_tv)
+    class PetProfileViewHolder(itemView: View, private val onClick: (Vertebrate) -> Unit): RecyclerView.ViewHolder(itemView){
+        private val petProfileTV: TextView = itemView.findViewById(R.id.petprofile_name_cell)
+       // private val petProfI2TV: TextView = itemView.findViewById(R.id.petprofile_age_cell)
 
         private var currentPetProfile: Vertebrate? = null
 
@@ -45,7 +46,7 @@ class PetprofileAdapater (private val onPetProfileClick: (Vertebrate)-> Unit): R
         fun bind( petprofile: Vertebrate){
             currentPetProfile = petprofile
             petProfileTV.text = petprofile.text
-            petProfI2TV.text =  petprofile.number.toString()
+          //  petProfI2TV.text =  petprofile.number.toString()
         }
     }
 

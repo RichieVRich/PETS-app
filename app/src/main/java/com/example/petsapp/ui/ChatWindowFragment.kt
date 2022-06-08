@@ -1,7 +1,6 @@
 package com.example.petsapp.ui
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -12,10 +11,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.petsapp.Chat.App
-import com.example.petsapp.Chat.ChatService
-import com.example.petsapp.Chat.Message
-import com.example.petsapp.Chat.MessageAdapter
+import com.example.petsapp.chat_pusher.App
+import com.example.petsapp.chat_pusher.ChatService
+import com.example.petsapp.chat_pusher.Message
+import com.example.petsapp.chat_pusher.MessageAdapter
 import com.example.petsapp.R
 import com.pusher.client.Pusher
 import com.pusher.client.PusherOptions
@@ -39,7 +38,7 @@ class ChatWindowFragment : Fragment(R.layout.chatwindow) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as AppCompatActivity).supportActionBar?.title = "${App.user}"
+        //(activity as AppCompatActivity).supportActionBar?.title = "${App.user}"
         messageList = view.findViewById(R.id.messageList)
         btnSend = view.findViewById(R.id.btnSend)
         txtMessage = view.findViewById(R.id.textMessage)
@@ -47,17 +46,16 @@ class ChatWindowFragment : Fragment(R.layout.chatwindow) {
         messageList.layoutManager = LinearLayoutManager(requireContext())
         adapter = MessageAdapter(requireContext())
         messageList.adapter = adapter
-        val test: String = App.user.toString()
+
         btnSend.setOnClickListener{
             if(txtMessage.text.isNotEmpty()){
                 val message = Message(
-                    test,
+                    App.user,
                     txtMessage.text.toString(),
                     Calendar.getInstance().timeInMillis
                 )
-                Log.d(TAG, message.toString())
+
                 val call = ChatService.create().postMessage(message)
-                Log.d(TAG, call.toString())
                 call.enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>, response: Response<Void>){
                         resetInput()
@@ -71,13 +69,14 @@ class ChatWindowFragment : Fragment(R.layout.chatwindow) {
                     override fun onFailure(call: Call<Void>, t: Throwable) {
                         resetInput()
                         Log.e(TAG, t.toString())
-                        Toast.makeText(activity, "Error when calling the service", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(activity, "Error: Server is Down", Toast.LENGTH_SHORT).show()
                     }
                 })
             }else{
                 Toast.makeText(activity, "Message should not be empty", Toast.LENGTH_SHORT).show()
             }
         }
+
         setupPusher()
 
 

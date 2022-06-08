@@ -1,4 +1,4 @@
-package com.example.petsapp.Chat
+package com.example.petsapp.chat_pusher
 
 import java.text.SimpleDateFormat
 import java.util.*

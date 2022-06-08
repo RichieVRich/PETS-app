@@ -16,18 +16,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Weekly"
-            android:textSize="35sp"/>
+            android:text="Monthly"
+            android:textSize="20sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:textSize="50sp"/>
+            android:textSize="20sp"/>
         <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:textAlignment="center"
-             android:textSize="50sp"/>
+             android:textSize="20sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -39,28 +39,41 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/blank_space"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/month_navigation_previous"
+            android:layout_height="wrap_content"
             app:drawableStartCompat="@drawable/ic_arrow_left" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="xx/xx - xx/xx"
+            android:text="@string/default_month"
+            android:id="@+id/monthYearTV"
             android:textSize="20sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/month_navigation_next"
             app:drawableStartCompat="@drawable/ic_arrow_right" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingLeft="20dp"
+            android:textAlignment="center"
             android:text="@string/calendar_sun"
             android:textSize="16sp"/>
         <TextView
@@ -108,11 +121,14 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendar_recycle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:orientation="vertical" />
+
 
 
 </LinearLayout>

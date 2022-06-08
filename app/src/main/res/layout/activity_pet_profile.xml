@@ -14,8 +14,19 @@
         />
     <EditText
         android:layout_width="wrap_content"
+        android:id="@+id/petProfileName_ev"
+        android:inputType="text"
+        android:maxLines="1"
         android:layout_height="wrap_content"
         android:hint="Enter Pet's Name"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:id="@+id/petProfileAge_ev"
+        android:inputType="number"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:hint="Enter Pet's Name"/>
+
 
     <Spinner
         android:id="@+id/spinner_species"
@@ -75,6 +86,7 @@
         />
     <Button
         android:layout_width="wrap_content"
+        android:id="@+id/petProfileAdd_btn"
         android:layout_height="wrap_content"
         android:text="Add Pet"
         android:padding="5dp"

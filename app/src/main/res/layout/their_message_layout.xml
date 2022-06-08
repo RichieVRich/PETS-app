@@ -13,6 +13,7 @@
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/white"
         android:layout_marginTop="5dp" />
 
     <TextView
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:maxWidth="240dp"
         android:padding="15dp"
+        android:textSize="20sp"
         android:elevation="5dp"
         android:textColor="#ffffff"
         android:layout_marginTop="4dp"
@@ -34,7 +36,8 @@
         android:text="12:00 PM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@+id/txtOtherMessage"
         android:layout_marginLeft="10dp"

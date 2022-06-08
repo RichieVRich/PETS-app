@@ -1,7 +1,5 @@
 package com.example.petsapp.ui
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -9,7 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.petsapp.Chat.App
+import com.example.petsapp.chat_pusher.App
 import com.example.petsapp.R
 
 class LoginFragment : Fragment(R.layout.activity_login) {

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homepage_fragment">
+    app:startDestination="@id/Login">
 
 
         <fragment
@@ -21,9 +21,6 @@
             <action
                 android:id="@+id/action_homepage_fragment_to_petprofile_fragment"
                 app:destination="@id/petprofile_fragment" />
-            <action
-                android:id="@+id/action_homepage_fragment_to_Login"
-                app:destination="@id/Login" />
         </fragment>
 
         <fragment
@@ -35,7 +32,11 @@
             android:id="@+id/petprofile_fragment"
             android:name="com.example.petsapp.ui.PetProfileFragment"
             android:label="@string/label_petp"
-            tools:layout="@layout/activity_pet_profile"/>
+            tools:layout="@layout/activity_pet_profile">
+            <action
+                android:id="@+id/action_petprofile_fragment_to_homepage_fragment"
+                app:destination="@id/homepage_fragment" />
+        </fragment>
 
         <fragment
             android:id="@+id/calendar_fragment"

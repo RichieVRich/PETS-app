@@ -1,4 +1,4 @@
-package com.example.petsapp.Chat
+package com.example.petsapp.chat_pusher
 
 import android.content.Context
 import android.view.LayoutInflater
